@@ -3,16 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <title>Testing Miniproject</title>
+    <meta name="google-signin-client_id" content="419039044789-rbianv5f7u6ctv2kb7s42d37ck0en9fj.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
 <body>
+
+<div class="g-signin2" data-onsuccess="onSignIn">
+</div>
+<script>
+    function onSignIn(googleUser) {
+        var profile = googleUser.getBasicProfile();
+        console.log('Name: ' + profile.getName());
+        var username = profile.getName();
+    }
+</script>
+
 <h1> Welcome, Here is your data!</h1>
-<div class="g-signin2" data-onsuccess="onSignIn"></div>
 <p1> Temperature </p1>
 <br>
 <p2> Humidity </p2>
-<script src="scripts/App.js"></script>
-</body>
-<script src="https://apis.google.com/js/platform.js" async defer></script>
-<meta name="google-signin-client_id" content="419039044789-8mhc2q46md9p1c567b2k7045nvc0plrn.apps.googleusercontent.com">
+<br />
+<a href="#" onclick="signOut();">Sign out</a>
+<script>
+    function signOut() {
+        var auth2 = gapi.auth2.getAuthInstance();
+        auth2.signOut().then(function () {
+            console.log('User signed out.');
+        });
+    }
+</script>
 
+<script src="App.js"></script>
+
+</body>
 </html>
