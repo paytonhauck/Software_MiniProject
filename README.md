@@ -4,8 +4,8 @@ Members:
 Jake Thornton
 Payton Hauck
 
-Ran in JetBrains WebStrom using Javascript/HTML
-Chrome
+Ran with JetBrains WebStrom using Javascript/HTML
+Browser: Google Chrome
 
 Working:
 - Implemented a working database through Azure Microsoft SQL Cloud Database
@@ -17,3 +17,7 @@ Issues:
   -Tried to implement with documentgetElementById() , but ran into many errors
   -Print results to console to show data exists
 - Issue sending data to database but able to insert non-variable values
+
+
+Both Partners were new to web development and implementing the database & authentication into code.
+Also, both struggled with the communication between front-end and back-end.
