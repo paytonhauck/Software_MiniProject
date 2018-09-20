@@ -14,6 +14,6 @@ Working:
 
 Issues:
 - Issue printing/plotting data to main web browser
-  ~Tried to implement with documentgetElementById() , but ran into many errors
-  ~Print results to console to show data exists
+  -Tried to implement with documentgetElementById() , but ran into many errors
+  -Print results to console to show data exists
 - Issue sending data to database but able to insert non-variable values
