@@ -1,28 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Testing Miniproject</title>
     <meta name="google-signin-client_id" content="419039044789-rbianv5f7u6ctv2kb7s42d37ck0en9fj.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
 </head>
-<body>
 
+<body>
 <div class="g-signin2" data-onsuccess="onSignIn">
 </div>
 <script>
     function onSignIn(googleUser) {
         var profile = googleUser.getBasicProfile();
         console.log('Name: ' + profile.getName());
-        var username = profile.getName();
     }
 </script>
 
-<h1> Welcome, Here is your data!</h1>
-<p1> Temperature </p1>
-<br>
-<p2> Humidity </p2>
+<h2 id="yup"> Welcome, Sign in then enter your username!</h2>
+
+<form id="formId">
+    <input type="text" id="textFieldId" name="textField">
+    <button type="submit" id="submitButton">Submit</button>
+</form>
+<script>
+    $("#formId").submit(function (event) {
+        $.post('/route', $("#formId").serialize(), function (data) {
+            console.log(data) //data is the response from the backend
+        });
+        event.preventDefault();
+    });
+</script>
 <br />
+
 <a href="#" onclick="signOut();">Sign out</a>
 <script>
     function signOut() {
@@ -32,8 +43,6 @@
         });
     }
 </script>
-
-<script src="App.js"></script>
 
 </body>
 </html>
