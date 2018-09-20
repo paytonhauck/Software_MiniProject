@@ -19,5 +19,5 @@ Issues:
 - Issue sending data to database but able to insert non-variable values
 
 
-Both Partners were new to web development and implementing the database & authentication into code.
+Note: Both Partners were new to web development and implementing the database & authentication into code.
 Also, both struggled with the communication between front-end and back-end.
